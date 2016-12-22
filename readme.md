@@ -3,12 +3,20 @@ contoh sederhana Kombinasi Laravel dan Vue Js 2
 
 ##Langkah langkah
 1.Clone git
+
+```bash
 git clone https://github.com/faozimipa/zilavue.git Nama_Foldermu
+```
 2.Masuk ke folder kamu
+```bash
 cd /Nama_Foldermu
+```
 3.Buat / Edit .env
+
 4.Install Vendor
+```bash
 composer install
+```
 5.Generate Key
 php artisan key:generate
 5.Tambah package sementara saya pake vue route dan vue strap
