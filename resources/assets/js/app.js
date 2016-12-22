@@ -15,16 +15,16 @@ require('./bootstrap');
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Home from './components/Home.vue'
 import Example from './components/Example.vue'
+import About from './components/About.vue'
 
-//Vue.component('example', require('./components/Example.vue'));
 
 //use Plugin
 Vue.use(VueRouter)
 
 
 // 2. Define route components
-const Home = { template: '<div>home</div>' }
 const Foo = { template: '<div>Faozi</div>' }
 const Bar = { template: '<div>Bar</div>' }
 
@@ -34,10 +34,9 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     { path: '/', component: Home },
-    { path: '/foo', component: Foo },
+    { path: '/about', component: About },
     { path: '/bar', component: Bar },
-    { path: '/example', component: Example },
-    { path: '/rooms', component: Room } 
+    { path: '/example', component: Example }
    ]
 })
 
@@ -47,6 +46,8 @@ const router = new VueRouter({
 new Vue({
   router,
   components : {
+    Home, 
+    About, 
     Example,
   },
   data : {
